@@ -5,6 +5,7 @@ import org.solent.com504.factoryandfacade.model.Cat;
 import org.solent.com504.factoryandfacade.model.Cow;
 import org.solent.com504.factoryandfacade.model.Dog;
 import org.solent.com504.factoryandfacade.model.FarmFacade;
+import org.solent.com504.factoryandfacade.model.Girrafe;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -33,7 +34,11 @@ public class AnimalObjectFactorySpringImpl {
         Cow cow = (Cow) context.getBean("cow");
         return cow;
     }
-
+    
+    public static Animal createGirrafe(){
+        Girrafe girrafe = (Girrafe) context.getBean("girrafe");
+        return girrafe;   
+    }
     public static FarmFacade getFarmFacade() {
         // nb farmFacade is a singleton bean - there is only ever one and this gets the facade
         FarmFacade farmFacade = (FarmFacade) context.getBean("farmFacade");

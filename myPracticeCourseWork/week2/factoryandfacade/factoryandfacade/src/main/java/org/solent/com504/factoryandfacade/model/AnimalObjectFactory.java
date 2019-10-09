@@ -15,6 +15,10 @@ public class AnimalObjectFactory{
     public static Animal createCow() {
         return new Cow();
     }
+    
+    public static Animal createGirrafe(){
+        return new Girrafe();
+    }
 
     public static FarmFacade createFarmFacade() {
         FarmFacade farmfacade = new FarmFacadeImpl();
